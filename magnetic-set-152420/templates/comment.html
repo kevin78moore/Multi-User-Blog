@@ -1,0 +1,14 @@
+<div class="comment">
+    <div class="comment-header">
+        <div class="comment-author">
+            by {{comment.author | upper }} on {{comment.created.strftime("%b %d, %Y %I:%M%p")}}
+        </div>
+        {% if user_id == comment.author %}
+            <a class="comment-edit" href="/comment/{{comment.key().id()}}/edit">Edit</a>
+            <a class="comment-delete" href="/comment/{{comment.key().id()}}/delete">Delete</a>
+        {% endif %}
+    </div>
+    <div class="comment-content">
+        {{comment._render_text | safe}}
+    </div>
+</div>

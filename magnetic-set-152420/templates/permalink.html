@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {{post.render("post.html", user_id) | safe}}
+    
+    <h3>Comments</h3>
+    
+    {% if comments %}
+        {% for comment in comments %}
+            <hr>
+            {{comment.render("comment.html", user_id) | safe}}
+        {% endfor %}
+    {% endif %}
+    
+    {% if user_id %}
+        <div>
+            <h3>New Comment</h3>
+            <form method="POST">
+                <input type="hidden" name="comment_id" value="{{comment_id}}">
+                <textarea  class="comment-new" name="content">{{content | safe}}</textarea>
+                <div class="error comment-error">{{error}}</div>
+                <br>
+                <input type="submit">
+            </form>
+            <a href="/blog/{{post.key().id()}}"><button class="btn-cancel">Cancel</button></a>
+        </div>
+    {% endif %}
+{% endblock %}

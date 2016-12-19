@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h3>Are you sure you want to delete your post titled {{post.subject}}?</h3>
+    <form method="post">
+        <input type="radio" name="delete" value="True">DELETE </br>
+        <input type="radio" name="delete" value="False">I TAKE IT BACK, I LOVE THIS POST </br>
+        <input type="submit">
+    </form>     
+
+{% endblock %}

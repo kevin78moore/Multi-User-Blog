@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Blogs</h1>
+
+{% for post in posts %}
+
+    {{post.render("post.html", user_id) | safe}}
+    <a href="/blog/{{post.key().id()}}">Comments....</a>
+
+{% endfor %}
+
+    
+
+{% endblock %}

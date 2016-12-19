@@ -1,0 +1,25 @@
+<div class="post">
+    <div class="post-header">
+        <a class="post-title" href="/blog/{{post.key().id()}}">{{post.subject}}</a>
+        <span class="post-author"> - {{post.author | upper}} </span>
+        <span class="like-count">Likes {{post.like_count}}</span>
+
+        {% if user_id and not user_id in post.liked %}
+            <form class="likes" method="post">
+                <input type="text" hidden='true' name='post_id' value={{post.key().id()}}>
+                <button name="like" type="submit" value=1><i class="fa fa-thumbs-up fa-md" aria-hidden="true"></i></button>
+                <button name="like" type="submit" value=-1><i class="fa fa-thumbs-down fa-md" aria-hidden="true"></i></button>
+            </form>
+        {% endif %}
+
+        {% if user_id == post.author %}
+            <a class="post-edit" href="/blog/{{post.key().id()}}/edit">Edit</a>  
+            <a class="post-delete" href="/blog/{{post.key().id()}}/delete">Delete</a>    
+            <span class="post-date">{{post.created.strftime("%b %d, %Y %I:%M%p")}}</span>
+        {% endif %}
+    </div>
+
+    <div class="post-content">
+        {{post._render_text | safe}}
+    </div>
+</div>

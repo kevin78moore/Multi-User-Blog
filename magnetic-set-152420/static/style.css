@@ -1,0 +1,173 @@
+body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.logged-in {
+    font-size: 14px;
+    text-align: center;
+}
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.login {
+    width: 100px;
+    display: inline-block;
+}
+
+input[type=text], input[type=password] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+  width: 100px;
+  padding-top: 2px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.btn-cancel {
+  font-size: 13px;
+  width: 100px;
+  padding-top: 2px;
+  margin-top: 20px;
+  margin-right: 10px;  
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post {
+    margin: 25px auto;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.post-author {
+    font-size: 14px;
+    font-weight: normal;
+    color: #999;
+}
+
+.post-date {
+    position: absolute;
+    right: 10px;
+    padding-top: 12px;
+    color: #999;
+
+}
+
+.post-content {
+    margin-top: 5px;
+}
+
+.post-edit, .post-delete {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 15px;
+}
+
+.likes {
+    display: inline-block;
+}
+
+.comment {
+    padding: 5px 0;
+}
+
+.comment-header {
+    display: inline-flex;
+}
+
+.comment-header a {
+    padding-left: 15px;
+}
+
+.comment-author {
+    padding-bottom: 5px;
+    color: #999;
+}
+
+.comment-new {
+  height: 100px;
+  width: 100%;
+  font-family: monospace;
+ }
+
+ .comment-error {
+     padding-top: 10px;
+ }
+

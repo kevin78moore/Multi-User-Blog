@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <!-- Fontawesome -->
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+        <link type="text/css" rel="stylesheet" href="/static/style.css">
+        <script src="/static/script.js"></script>
+        
+        <title>Udacity Multi-User Blog Project</title>
+    </head>
+    <body id="content">
+        <ul class="nav">
+            <li><a href="\">Home</a></li>
+            {% if user_id %}
+                <li><a href="\newpost">New Post</a></li>
+            {% else %}
+                <li><a href="\signup">Sign Up</a></li>
+                <li><a href="\login">Login</a></li>
+            {% endif %}
+            {% if user_id %}
+                <li><a href="\logout">Logout</a></li>
+                <li class="logged-in">Logged in as {{user_id.upper()}}</li>
+            {% endif %}
+        </ul>
+        
+        
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
